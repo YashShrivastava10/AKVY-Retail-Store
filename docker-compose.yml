@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    container_name: RetailStore_DB
+    image: mongo
+    ports:
+      - "30001:3306"
+    environment:
+      MONGO_ROOT_PASSWORD: Vijju123
+      
+  app:
+    container_name: RetailStore
+    links:
+      - 'db'
+    build: ./
+    ports:
+      - '5001:5000'
