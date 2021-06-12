@@ -2,9 +2,7 @@
 Note: In order to run this program, there should be at least one entry in admin
 '''
 
-import dns.resolver
-dns.resolver.default_resolver=dns.resolver.Resolver(configure = False)
-dns.resolver.default_resolver.nameservers=['8.8.8.8']
+
 import datetime as dt
 from datetime import datetime
 import geopy
